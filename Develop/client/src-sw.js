@@ -34,6 +34,3 @@ new StaleWhileRevalidate({
   ],
 })
 );
-
-// TODO: Implement asset caching
-// registerRoute();
