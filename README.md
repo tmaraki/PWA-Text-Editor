@@ -39,7 +39,21 @@ This is a text editor that is a single-page application meeting PWA criteria and
         THEN I should have proper build scripts for a webpack application
 
 # Technologies Used
-- Render
 
+- The application will use the following npm packages:
+
+                npm install express (express.js)
+                npm install --save-dev webpack (Webpack)
+                npm install webpack-dev-server --save-dev (webpack-dev-server)
+                npm install --save-dev webpack-pwa-manifest (WebpackPwaManifest)
+                npm install babel (Babel)
+                npm install --save-dev css-loader (CSS-loader)
+                npm install concurrently --save (run multiple commands concurrently.) (Concurrently)
+                npm npm install idb (IndexedDB)
 
 # Installation Instructions
+
+- To initiate the application, first install the required npm packages
+- Then run the following command in your terminal:
+
+                npm run build
