@@ -56,4 +56,6 @@ This is a text editor that is a single-page application meeting PWA criteria and
 - To initiate the application, first install the required npm packages
 - Then run the following command in your terminal:
 
-                npm run build
+                npm run start
+
+- Under the client side folder, a "dist" folder will automatically populate. Open the "index.html" file in the dist folder to start using your text editor!
