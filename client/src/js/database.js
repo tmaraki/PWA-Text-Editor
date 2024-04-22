@@ -16,42 +16,27 @@ const initdb = async () =>
 export const putDb = async (content) => {
   console.log('PUT to the database');
 
-  const dbPromise = window.indexedDB.open('openDB');
+  const contactDb = await openDB('jate', 1);
+  const tx = contactDb.transaction(['jate'], 'readwrite'); 
+  const store = tx.objectStore('jate'); 
+  const request = store.put({ id: 1, value: content }); 
 
-  const db = await new Promise((resolve, reject) => {
-    dbPromise.onsuccess = (event) => resolve(event.target.result);
-    dbPromise.onerror = (event) => reject(event.target.error);
-  });
-
-  const tx = db.transaction(['jate'], 'readwrite'); // changed this line
-  const store = tx.objectStore('jate'); // changed this line
-  const request = store.put(content); // changed this line
-
-  await new Promise((resolve, reject) => {
-    request.onsuccess = (event) => resolve(event.target.result);
-    request.onerror = (event) => reject(event.target.error);
-  });
-
-  console.log('Data saved to the database');
+  const result = await request;
+  console.log("Data saved!", result);
 };
 
 // TODO: Add logic for a method that gets all the content from the database
 export const getDb = async () => {
-  const dbPromise = window.indexedDB.open('openDB');
-
-  const db = await new Promise((resolve, reject) => {
-    dbPromise.onsuccess = (event) => resolve(event.target.result);
-    dbPromise.onerror = (event) => reject(event.target.error);
-  });
-
-  const tx = db.transaction(['jate'], 'readonly'); // changed this line
+  ;console.log('GET from database')
+  
+  const contactDb = await openDB('jate', 1);
+  const tx = contactDb.transaction(['jate'], 'readonly'); // changed this line
   const store = tx.objectStore('jate'); // changed this line
   const request = store.getAll(); // changed this line
 
-  return await new Promise((resolve, reject) => {
-    request.onsuccess = (event) => resolve(event.target.result);
-    request.onerror = (event) => reject(event.target.error);
-  });
+  const result = await request;
+  console.log('result.value', result);
+  return result?.value;
 };
 
 initdb();
