@@ -4,6 +4,16 @@
 
 This is a text editor that is a single-page application meeting PWA criteria and deployed on Render. Starting with an existing application, methods have been implemented for getting and storing data to an IndexedDB database.
 
+# Table of Contents
+
+- [Description](#description)
+- [The Challenge](#the-challenge)
+- [Technologies-Used](#technologies-used)
+- [Installation](#installation-instructions)
+- [Author](#the-author)
+
+# The Challenge
+
 ## User Story
 
         AS A developer
@@ -42,20 +52,26 @@ This is a text editor that is a single-page application meeting PWA criteria and
 
 - The application will use the following npm packages:
 
-                npm install express (express.js)
-                npm install --save-dev webpack (Webpack)
-                npm install webpack-dev-server --save-dev (webpack-dev-server)
-                npm install --save-dev webpack-pwa-manifest (WebpackPwaManifest)
-                npm install babel (Babel)
-                npm install --save-dev css-loader (CSS-loader)
-                npm install concurrently --save (run multiple commands concurrently.) (Concurrently)
-                npm npm install idb (IndexedDB)
+        npm install express (express.js)
+        npm install --save-dev webpack (Webpack)
+        npm install webpack-dev-server --save-dev (webpack-dev-server)
+        npm install --save-dev webpack-pwa-manifest (WebpackPwaManifest)
+        npm install babel (Babel)
+        npm install --save-dev css-loader (CSS-loader)
+        npm install concurrently --save (run multiple commands concurrently.)
+        npm npm install idb (IndexedDB)
 
 # Installation Instructions
 
 - To initiate the application, first install the required npm packages
 - Then run the following command in your terminal:
 
-                npm run start
+        npm run start
 
 - Under the client side folder, a "dist" folder will automatically populate. Open the "index.html" file in the dist folder to start using your text editor!
+
+- You can visit the Live Application through Render [HERE](https://pwa-text-editor-oicu.onrender.com/)
+
+# The Author
+
+My Github profile is Linked Here! Additional questions or concerns? feel free to contact me at toshiemaraki@gmail.com.
